@@ -1,0 +1,17 @@
+# Ignore compiled Java classes
+*.class
+
+# Ignore libraries (optional if you include manually)
+*.jar
+
+# Ignore output folders
+/out/
+/bin/
+
+# IDE specific files
+/.idea/
+/.vscode/
+*.iml
+
+# Ignore environment/config files if any
+.env
