@@ -1,44 +1,88 @@
-# EmployeeCRUD
+# Employee Management System (Java)
 
-A simple Java project to perform CRUD operations on employees using MySQL database.
+A console-based Java application developed to understand and implement
+CRUD (Create, Read, Update, Delete) operations on employee data using
+JDBC and a MySQL database.
+
+This project focuses on backend fundamentals such as database connectivity,
+SQL operations, and clean code structure.
+
+---
 
 ## Features
-- Add employee
+- Add new employee records
 - View all employees
 - Update employee salary
-- Delete employee
+- Delete employee details
+- Menu-driven console interaction
+
+---
 
 ## Tech Stack
 - Java
-- MySQL
 - JDBC
+- MySQL
 
-## Setup
-1. **Clone the repository**:
- git clone git@github.com:ramyasai-333/EmployeeCRUD.git
+---
 
-2.**Set environment variables for database credentials**:
+## Project Structure
+- Model class for employee data
+- DAO layer for database operations
+- Utility class for database connection
+- Main class to handle user interaction
 
-  setx DB_USER "your_db_user"
-  setx DB_PASSWORD "your_db_password"
+---
 
-  Replace your_db_user and your_db_password with your MySQL credentials.
+## Setup Instructions
 
-3.**Make sure MySQL is running and your database is created**.
-  -> Create a database called employee_db (or whatever your project uses).
-  -> Ensure your tables match the project’s schema.
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/ramyasai-333/Employee-Management-System-Java.git
+```
+### 2️⃣ Configure database credentials
+Set your MySQL credentials as environment variables:
+```bash
+setx DB_USER "your_db_user" 
+setx DB_PASSWORD "your_db_password"
+```
+Replace your_db_user and your_db_password with your MySQL username and password.
 
-4.**Run the project**:
-  -> Open in your IDE (Eclipse/IntelliJ/VS Code) and run Main.java
-  -> Or compile & run from terminal:
+### 3️⃣ Database setup
+- Ensure MySQL is running
+- Create a database (for example: `employee_db`)
+- Create the required employee table based on the project schema
 
+### 4️⃣ Run the application
+
+### Using an IDE
+- Open the project in Eclipse / IntelliJ / VS Code
+- Run the `Main.java` file
+
+### Using terminal
+```bash
 javac -cp ".;lib/mysql-connector-java-<version>.jar" src/*.java
-java -cp ".;lib/mysql-connector-java-<version>.jar;src" com.employee.crud.Main
+java -cp ".;lib/mysql-connector-java-<version>.jar;src" com.company.ems.Main
+```
+Replace <version> with your MySQL Connector/J version (for example, 8.0.31).
 
-Replace 8.0.31 with your MySQL connector version if different.
-## Usage
+### Usage
+Run the application and follow the menu displayed in the terminal to:
 
-Follow the menu in the terminal to add, view, update, or delete employees.
+- Add employees
+- View employee details
+- Update salary
+- Delete employee records
 
-## Author
+### What I Learned
+- JDBC connection handling
+- CRUD operations using SQL
+- DAO design pattern
+- Exception handling in Java
+- Structuring a backend Java project
+
+### Note
+This project was developed as part of learning Java backend development,
+using reference materials and documentation to understand JDBC and database operations.
+
+### Author
 Ramya Sai Tirumalasetty
