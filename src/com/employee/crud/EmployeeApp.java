@@ -2,11 +2,11 @@ package com.employee.management;
 
 import java.util.Scanner;
 
-public class Main {
+public class EmployeeApp {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        EmployeeDAO dao = new EmployeeDAO();
+        EmployeeRepository repo = new EmployeeRepository();
 
         while (true) {
             System.out.println("\n===== Employee Management System =====");
@@ -16,6 +16,7 @@ public class Main {
             System.out.println("4. Delete Employee");
             System.out.println("5. Exit");
             System.out.print("Enter choice: ");
+
             int choice = sc.nextInt();
             sc.nextLine(); // consume newline
 
@@ -23,31 +24,35 @@ public class Main {
                 case 1:
                     System.out.print("Name: ");
                     String name = sc.nextLine();
+
                     System.out.print("Age: ");
                     int age = sc.nextInt();
                     sc.nextLine();
+
                     System.out.print("Department: ");
                     String dept = sc.nextLine();
+
                     System.out.print("Salary: ");
                     double salary = sc.nextDouble();
                     sc.nextLine();
 
-                    Employee emp = new Employee(name, age, dept, salary);
-                    dao.addEmployee(emp);
+                    EmployeeModel emp = new EmployeeModel(name, age, dept, salary);
+                    repo.addEmployee(emp);
                     break;
 
                 case 2:
-                    dao.viewAllEmployees();
+                    repo.viewAllEmployees();
                     break;
 
                 case 3:
                     System.out.print("Enter Employee ID to update salary: ");
                     int idToUpdate = sc.nextInt();
+
                     System.out.print("Enter new Salary: ");
                     double newSalary = sc.nextDouble();
                     sc.nextLine();
 
-                    dao.updateSalary(idToUpdate, newSalary);
+                    repo.updateSalary(idToUpdate, newSalary);
                     break;
 
                 case 4:
@@ -55,7 +60,7 @@ public class Main {
                     int idToDelete = sc.nextInt();
                     sc.nextLine();
 
-                    dao.deleteEmployee(idToDelete);
+                    repo.deleteEmployee(idToDelete);
                     break;
 
                 case 5:
@@ -69,3 +74,4 @@ public class Main {
         }
     }
 }
+
