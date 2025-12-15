@@ -1,4 +1,4 @@
-package com.employee.crud;
+package com.employee.management;
 
 import java.util.Scanner;
 
