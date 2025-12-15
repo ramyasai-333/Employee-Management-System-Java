@@ -1,4 +1,4 @@
-package com.employee.crud;
+package com.employee.management;
 
 public class Employee {
     private int id;
